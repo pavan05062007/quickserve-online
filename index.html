@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="QuickServe Online - Digital assistance for online services across India.">
+<title>QuickServe Online | One Place. Multiple Services. Done Online.</title>
+<style>
+:root{--primary:#155eef;--dark:#10233f;--bg:#f6f8fc;--card:#fff;--text:#172033;--muted:#64748b;--border:#e2e8f0;--success:#0f9d58}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{text-decoration:none;color:inherit}.container{max-width:1180px;margin:auto;padding:0 18px}
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.logo{font-size:22px;font-weight:800;color:var(--primary)}.logo span{color:var(--dark)}
+nav{display:flex;gap:18px;align-items:center}nav a{font-size:14px;font-weight:600;color:#475569}nav a:hover{color:var(--primary)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;padding:12px 17px;font-weight:700;cursor:pointer}.btn-primary{background:var(--primary);color:#fff}.btn-light{background:#eef4ff;color:var(--primary)}
+.menu{display:none;background:none;border:0;font-size:25px}
+.hero{background:linear-gradient(135deg,#10233f,#155eef);color:#fff;padding:75px 0}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:35px;align-items:center}
+.badge{display:inline-block;background:rgba(255,255,255,.13);padding:7px 12px;border-radius:30px;font-size:13px;font-weight:700}.hero h1{font-size:clamp(35px,5vw,58px);line-height:1.05;margin:18px 0 14px}.hero p{font-size:18px;color:#dbeafe;max-width:680px}
+.search{display:flex;background:#fff;padding:7px;border-radius:14px;margin-top:25px;max-width:720px}.search input{flex:1;border:0;outline:0;padding:13px;font-size:16px;border-radius:10px}.search button{border:0;border-radius:10px;background:var(--primary);color:#fff;padding:0 22px;font-weight:700}
+.hero-card{background:#fff;color:var(--text);padding:25px;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.2)}.hero-card h3{margin-top:0}.hero-card li{margin:11px 0}
+section{padding:55px 0}.section-head{text-align:center;margin-bottom:28px}.section-head h2{font-size:32px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
+.notice{background:#fff;border:1px solid var(--border);padding:18px;border-radius:14px;margin-bottom:25px}.notice strong{color:var(--primary)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:20px;cursor:pointer;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,23,42,.10);border-color:#93c5fd}.service:focus{outline:3px solid #93c5fd;outline-offset:2px}.icon{font-size:28px}.service h3{font-size:17px;margin:10px 0 5px}.service p{font-size:13px;color:var(--muted);margin:0}.tag{display:inline-block;font-size:11px;background:#eff6ff;color:#155eef;padding:4px 7px;border-radius:20px;margin-top:10px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:#fff;border:1px solid var(--border);padding:22px;border-radius:15px}.num{width:35px;height:35px;border-radius:50%;background:#eaf1ff;color:var(--primary);display:grid;place-items:center;font-weight:800}
+.contact{background:#10233f;color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact p{color:#cbd5e1}.contact a{color:#fff}.form{background:#fff;color:var(--text);padding:24px;border-radius:16px}.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:9px;margin:6px 0 13px;font:inherit}.form textarea{min-height:100px}
+footer{background:#09182d;color:#cbd5e1;padding:30px 0}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small{font-size:12px;color:#94a3b8}
+.modal{display:none;position:fixed;inset:0;background:rgba(2,6,23,.65);z-index:100;padding:20px;overflow:auto}.modal.show{display:block}.modal-box{max-width:650px;margin:50px auto;background:#fff;border-radius:17px;padding:25px;position:relative}.close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}.modal-box h2{margin-top:0}.doc{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:13px;margin:8px 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.access{position:fixed;right:15px;bottom:15px;z-index:80}.access button{border:0;border-radius:50%;width:52px;height:52px;background:#10233f;color:#fff;font-size:21px;cursor:pointer}.access-panel{display:none;background:#fff;border:1px solid var(--border);padding:15px;border-radius:12px;margin-bottom:8px;box-shadow:0 10px 30px #0002}.access-panel.show{display:block}.access-panel button{width:auto;height:auto;border-radius:7px;background:#eef4ff;color:#10233f;font-size:13px;padding:8px;margin:3px}
+.easy body{}.easy .service,.easy .step,.easy .form{font-size:1.12em}.easy .btn{padding:15px 20px}
+.high-contrast{filter:contrast(1.25)}
+
+/* Final mobile navigation */
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:72px;
+  left:12px;
+  right:12px;
+  z-index:120;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:16px;
+  box-shadow:0 18px 45px rgba(15,23,42,.18);
+  padding:8px;
+}
+.mobile-menu.open{display:grid;gap:3px}
+.mobile-menu a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:13px 14px;
+  border-radius:10px;
+  font-weight:800;
+  color:#172033;
+}
+.mobile-menu a:hover{background:#eef4ff;color:#155eef}
+.mobile-menu .mobile-wa{background:#16a34a;color:#fff;margin-top:4px}
+
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
+@media(max-width:700px){body{overflow-x:hidden}nav{display:none}.menu{display:block;background:none;border:0;font-size:28px;line-height:1;padding:6px}.grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.hero{padding:50px 0}.search{flex-direction:column;gap:7px}.search button{padding:13px}.nav .btn{display:none}}
+@media(max-width:430px){
+      .grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}
+      .hero{padding:42px 0 48px}
+      .hero h1{font-size:39px;line-height:1.08}
+      .hero p{font-size:16px}
+      .hero-card{padding:20px}
+      .search{padding:6px}
+      .search input{padding:13px 12px}
+    }
+
+
+/* QuickServe visual upgrade */
+:root{--primary:#2563eb;--primary2:#7c3aed;--dark:#0f172a;--bg:#f4f7ff;--card:#fff;--text:#172033;--muted:#64748b;--border:#e2e8f0;--success:#16a34a;--gold:#f59e0b}
+body{background:radial-gradient(circle at 10% 0%,#eef4ff 0,transparent 30%),radial-gradient(circle at 90% 10%,#f3e8ff 0,transparent 26%),var(--bg)}
+header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
+.logo{font-size:24px;letter-spacing:-.4px}.logo:before{content:'⚡';display:inline-grid;place-items:center;width:32px;height:32px;margin-right:7px;border-radius:9px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-size:17px;vertical-align:-3px}
+.btn{transition:.2s transform,.2s box-shadow}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(37,99,235,.2)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#071a3a 0%,#123f92 48%,#6d28d9 100%);padding:82px 0}
+.hero:before,.hero:after{content:'';position:absolute;border-radius:50%;filter:blur(2px);opacity:.18}.hero:before{width:360px;height:360px;background:#60a5fa;right:-120px;top:-150px}.hero:after{width:300px;height:300px;background:#c084fc;left:-140px;bottom:-160px}
+.hero-grid{position:relative;z-index:1}.badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18)}
+.hero h1{text-shadow:0 8px 30px rgba(0,0,0,.2)}.hero-card{border:1px solid rgba(255,255,255,.55);box-shadow:0 25px 70px rgba(0,0,0,.28)}
+.hero-card .mini-pill{display:inline-flex;align-items:center;gap:6px;background:#eef4ff;color:#1d4ed8;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;margin:3px}
+.search{box-shadow:0 15px 35px rgba(0,0,0,.18)}
+.section-head h2{letter-spacing:-.7px}.notice{box-shadow:0 10px 28px rgba(15,23,42,.06)}
+.service{position:relative;overflow:hidden;box-shadow:0 5px 18px rgba(15,23,42,.04);background:linear-gradient(180deg,#fff,#fbfdff)}
+.service:after{content:'';position:absolute;right:-25px;top:-25px;width:75px;height:75px;border-radius:50%;background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(124,58,237,.10));pointer-events:none}
+.service .doc-link{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed #dbe3f0;color:#2563eb;font-size:12px;font-weight:900}
+.service .category-chip{display:inline-flex;margin-top:10px;background:#f1f5f9;color:#475569;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:800}
+.steps .step{box-shadow:0 8px 24px rgba(15,23,42,.05)}
+.step .num{box-shadow:0 7px 16px rgba(37,99,235,.18)}
+.join-group{margin:0 0 28px;padding:20px 22px;border-radius:18px;background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border:1px solid #bbf7d0;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 10px 25px rgba(22,163,74,.08)}
+.join-group .group-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#16a34a;color:#fff;font-size:25px;flex:none}.join-group h3{margin:0 0 4px}.join-group p{margin:0;color:#475569;font-size:13px}.join-group .btn{background:#16a34a;color:#fff;white-space:nowrap}
+.contact{background:linear-gradient(135deg,#0b1d3b,#132f69)}
+.contact-card{padding:14px 16px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.05);margin-top:10px}
+.modal-box{max-width:720px;border:1px solid #e2e8f0;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.modal-top{display:flex;gap:14px;align-items:flex-start;padding-right:30px}.modal-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#eef4ff,#f3e8ff);display:grid;place-items:center;font-size:30px;flex:none}.modal-sub{color:var(--muted);font-size:14px}
+.doc-section-title{display:flex;align-items:center;gap:8px;margin:22px 0 10px}.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.doc{margin:0;background:#f8fafc}.doc ul{margin:7px 0 0 18px;padding:0}.doc li{margin:4px 0}
+.doc.good{background:#f0fdf4;border-color:#bbf7d0}.doc.maybe{background:#fffbeb;border-color:#fde68a}.doc.info{background:#eff6ff;border-color:#bfdbfe}
+.action-note{font-size:12px;color:#64748b;margin-top:15px}.group-footer{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+@media(max-width:700px){.join-group{align-items:flex-start}.join-group .btn{width:100%}.join-group{flex-direction:column}.doc-grid{grid-template-columns:1fr}.modal-box{margin:20px auto;padding:20px}.modal-top{gap:10px}.modal-icon{width:48px;height:48px;font-size:25px}}
+
+
+/* Social updates banner */
+.social-updates{margin-top:24px;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.2);box-shadow:0 12px 35px rgba(0,0,0,.14)}
+.social-updates h3{margin:0 0 5px;font-size:18px}.social-updates p{margin:0 0 12px;font-size:13px;color:#dbeafe}.social-buttons{display:flex;gap:9px;flex-wrap:wrap}.social-buttons .btn{padding:10px 13px;font-size:13px}.btn-instagram{background:#fff;color:#c13584}.btn-channel{background:#f3e8ff;color:#7c3aed}.btn-group{background:#dcfce7;color:#15803d}
+.social-strip{margin:0 0 28px;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,#fff7ed,#fdf2f8,#f5f3ff);border:1px solid #e9d5ff;box-shadow:0 10px 28px rgba(124,58,237,.08)}
+.social-strip .social-row{display:flex;align-items:center;justify-content:space-between;gap:18px}.social-strip h3{margin:0 0 5px;font-size:19px}.social-strip p{margin:0;color:#64748b;font-size:13px}.social-strip .social-buttons{justify-content:flex-end}.social-strip .btn{white-space:nowrap}
+@media(max-width:700px){.social-strip .social-row{flex-direction:column;align-items:flex-start}.social-strip .social-buttons{width:100%}.social-strip .btn{flex:1;min-width:145px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="logo" href="#home">QuickServe <span>Online</span></a>
+<nav>
+<a href="#services">Services</a><a href="#how">How It Works</a><a href="#contact">Contact</a>
+<a class="btn btn-primary" href="https://wa.me/919901043113" target="_blank">WhatsApp</a><a class="btn btn-light" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Group</a><a class="btn btn-light" href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">IG Channel</a>
+</nav>
+<button class="menu" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+</header>
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <a href="#home" onclick="closeMobileMenu()">🏠 <span>Home</span></a>
+  <a href="#services" onclick="closeMobileMenu()">📋 <span>All Services</span></a>
+  <a href="#how" onclick="closeMobileMenu()">ℹ️ <span>How It Works</span></a>
+  <a href="#contact" onclick="closeMobileMenu()">📞 <span>Contact</span></a>
+  <a class="mobile-wa" href="https://wa.me/919901043113" target="_blank">💬 <span>WhatsApp Us</span></a>
+  <a href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">👥 <span>Join WhatsApp Group</span></a>
+  <a href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">📢 <span>Join Instagram Channel</span></a>
+</div>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<span class="badge">Serving Customers Across India</span>
+<h1>Need an Online Service?<br>We Help You Get It Done.</h1>
+<p>One Place. Multiple Services. Done Online.</p>
+<div class="search">
+<input id="searchInput" placeholder="What service do you need? e.g. PAN, Caste Certificate, Scholarship">
+<button onclick="searchServices()">Search</button>
+</div>
+<p style="font-size:13px;margin-top:12px">Examples: PAN Correction • Caste Certificate • Scholarship • Passport • GST Registration • Education Loan • Insurance • Train Ticket</p>
+<div class="social-updates">
+  <h3>📢 For Daily Updates, Stay Connected</h3>
+  <p>Follow us on Instagram, join our Instagram Channel and WhatsApp Group for daily updates, useful information and new service announcements.</p>
+  <div class="social-buttons">
+    <a class="btn btn-instagram" href="https://www.instagram.com/heyy.__pavan/" target="_blank">📷 Follow Instagram</a>
+    <a class="btn btn-channel" href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">📢 Join Instagram Channel</a>
+    <a class="btn btn-group" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">💬 Join WhatsApp Group</a>
+  </div>
+</div>
+</div>
+<div class="hero-card">
+<div class="mini-pill">📋 Document Checklist</div><div class="mini-pill">🇮🇳 India-Wide</div>
+<h3>Before You Apply, Know What You Need.</h3>
+<ul>
+<li>✓ Aadhaar, PAN, Voter ID & other ID proofs</li>
+<li>✓ Caste, Income, Residence & EWS certificates</li>
+<li>✓ Student, job, banking, insurance & travel documents</li>
+<li>✓ Usually Required + May Be Required documents</li>
+</ul>
+<div class="actions"><a class="btn btn-primary" href="#services">Explore Services</a><a class="btn btn-light" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Join WhatsApp Group</a></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head"><h2>Popular Services</h2><p>Major, high-demand services are shown first.</p></div>
+<div class="join-group"><div style="display:flex;gap:14px;align-items:center"><div class="group-icon">💬</div><div><h3>Join the QuickServe WhatsApp Group</h3><p>Get service updates, useful information, reminders and new service announcements.</p></div></div><a class="btn" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Join Group →</a></div>
+<div class="social-strip">
+  <div class="social-row">
+    <div><h3>📲 For Daily Updates, Follow & Join Us</h3><p>Follow us on Instagram and join our Instagram Channel + WhatsApp Group for daily updates.</p></div>
+    <div class="social-buttons">
+      <a class="btn btn-instagram" href="https://www.instagram.com/heyy.__pavan/" target="_blank">📷 Instagram</a>
+      <a class="btn btn-channel" href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">📢 Instagram Channel</a>
+      <a class="btn btn-group" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">💬 WhatsApp Group</a>
+    </div>
+  </div>
+</div>
+<div class="notice"><strong>Important:</strong> QuickServe Online is an independent digital assistance service. We are not a government office, bank, insurer, railway, university or other official authority. Approval/issuance is subject to the concerned authority/provider.</div>
+<div id="serviceGrid" class="grid"></div>
+</div>
+</section>
+
+<section id="how">
+<div class="container">
+<div class="section-head"><h2>How QuickServe Works</h2><p>Simple process from anywhere in India.</p></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Choose a Service</h3><p>Find the service you need using search or categories.</p></div>
+<div class="step"><div class="num">2</div><h3>Check Documents</h3><p>See the usual and possible documents before applying.</p></div>
+<div class="step"><div class="num">3</div><h3>Send Request</h3><p>Contact us through WhatsApp, phone or the request form.</p></div>
+<div class="step"><div class="num">4</div><h3>Get Assistance</h3><p>We review the request, quote applicable charges and proceed with your approval.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head"><h2>Secure & Responsible Service</h2><p>Your documents should be handled carefully.</p></div>
+<div class="grid">
+<div class="service"><div class="icon">🔐</div><h3>Minimum Data</h3><p>Only information necessary for the requested service should be collected.</p></div>
+<div class="service"><div class="icon">🚫</div><h3>No Passwords / OTPs</h3><p>Never share passwords, ATM PINs, UPI PINs or unnecessary OTPs.</p></div>
+<div class="service"><div class="icon">🗑️</div><h3>Document Retention</h3><p>Use a clear retention/deletion policy for uploaded documents.</p></div>
+<div class="service"><div class="icon">🇮🇳</div><h3>India-Wide</h3><p>State and service requirements can differ, so we check applicable requirements.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container contact-grid">
+<div>
+<h2>Need Help With a Service?</h2>
+<p>Send your requirement. We will review the request and tell you the next steps.</p>
+<p>📞 <a href="tel:+919901043113">9901043113</a></p>
+<p>💬 <a href="https://wa.me/919901043113" target="_blank">WhatsApp: 9901043113</a></p>
+<div class="contact-card"><strong>💬 QuickServe WhatsApp Group</strong><p>Join for updates, service information and announcements.</p><a class="btn" style="background:#16a34a;color:#fff" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Join WhatsApp Group</a></div>
+<p>✉️ <a href="mailto:pavankumarrogannavar@gmail.com">pavankumarrogannavar@gmail.com</a></p>
+<p>📷 <a href="https://ig.me/m/heyy.__pavan" target="_blank">Instagram — Message Us</a></p>
+<p>📢 <a href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">Join our Instagram Channel</a></p>
+<p class="small">For daily updates, follow us on Instagram and join our Instagram Channel + WhatsApp Group.</p>
+</div>
+<form class="form" onsubmit="submitRequest(event)">
+<h3>Service Request</h3>
+<label>Full Name</label><input required id="name" placeholder="Your name">
+<label>Mobile Number</label><input required id="mobile" type="tel" placeholder="10-digit mobile number">
+<label>State</label><select id="state"><option> Karnataka</option><option>Andhra Pradesh</option><option>Telangana</option><option>Tamil Nadu</option><option>Kerala</option><option>Maharashtra</option><option>Other State / UT</option></select>
+<label>Service Required</label><input required id="service" placeholder="e.g. Income Certificate">
+<label>Requirement Details</label><textarea id="details" placeholder="Tell us what you need"></textarea>
+<button class="btn btn-primary" type="submit">Send on WhatsApp</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+<div><strong>QuickServe Online</strong><div class="small">One Place. Multiple Services. Done Online.</div></div>
+<div class="small">© 2026 QuickServe Online. Independent digital assistance service.</div>
+<div class="small"><a href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">💬 WhatsApp Group</a> &nbsp;•&nbsp; <a href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">📢 Instagram Channel</a></div>
+</div>
+</footer>
+
+<a href="https://wa.me/919901043113" target="_blank" aria-label="WhatsApp QuickServe" style="position:fixed;left:16px;bottom:16px;z-index:80;background:#16a34a;color:#fff;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:24px;box-shadow:0 10px 25px #0003">💬</a>
+
+<style>
+/* Final floating controls */
+@media(max-width:600px){
+  .access{right:10px;bottom:10px}
+  .access > button{width:48px;height:48px}
+  .contact .form{margin-bottom:72px}
+}
+</style>
+<div class="access">
+<div id="accessPanel" class="access-panel">
+<strong>Accessibility</strong><br>
+<button onclick="changeFont(1)">A+</button><button onclick="changeFont(-1)">A−</button>
+<button onclick="resetFont()">Reset</button><button onclick="toggleContrast()">High Contrast</button>
+<button onclick="toggleEasy()">Easy Mode</button>
+</div>
+<button aria-label="Accessibility options" onclick="document.getElementById('accessPanel').classList.toggle('show')">♿</button>
+</div>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
+<div class="modal-box">
+<button class="close" onclick="closeModal()">×</button>
+<div id="modalContent"></div>
+</div>
+</div>
+
+<script>
+const WHATSAPP_NUMBER="919901043113";
+
+const services=[
+["🪪","Aadhaar Assistance","Aadhaar-related application guidance, correction/update information and appointment/centre guidance.","Usually Required: Aadhaar details/document; identity/address proof as applicable.","May Be Required: Additional supporting document or authorised-centre visit.","ID Proofs"],
+["💳","PAN Card New Application","Assistance with new PAN application and document preparation.","Usually Required: Identity proof, address proof, date-of-birth proof, photo/signature as applicable.","May Be Required: Additional supporting document depending on application.","ID Proofs"],
+["✏️","PAN Correction / Update","Assistance for name, DOB, address and other PAN corrections.","Usually Required: Existing PAN and supporting proof for the requested correction.","May Be Required: Additional proof if details differ.","ID Proofs"],
+["🗳️","Voter ID New Application","Guidance for new voter registration and application submission.","Usually Required: Identity/age and residence-related documents as applicable.","May Be Required: Additional documents based on electoral authority requirements.","ID Proofs"],
+["🗳️","Voter ID Correction / Update","Assistance with voter details correction/update.","Usually Required: Existing voter details and proof supporting the requested change.","May Be Required: Additional verification/document.","ID Proofs"],
+["🛂","Passport New Application","Passport application assistance and document checklist guidance.","Usually Required: Address proof, identity/DOB proof and photographs/documents as applicable.","May Be Required: Additional documents based on passport category and official requirements.","ID Proofs"],
+["🛂","Passport Renewal / Reissue","Assistance with passport renewal/reissue application preparation.","Usually Required: Existing passport and applicable address/supporting documents.","May Be Required: Additional documents depending on changes/category.","ID Proofs"],
+["📜","Caste Certificate — New","Assistance with caste certificate application/document preparation.","Usually Required: Identity/address proof and caste-related supporting documents as applicable.","May Be Required: Family/parent certificate, school record or local verification depending on state.","Certificates"],
+["♻️","Caste Certificate — Renewal / Update","Assistance with applicable caste certificate update/reissue processes.","Usually Required: Existing certificate and identity/address details.","May Be Required: Fresh supporting proof depending on state.","Certificates"],
+["💰","Income Certificate — New","Assistance with income certificate application.","Usually Required: Identity/address proof and income-related declaration/supporting documents.","May Be Required: Salary, bank, tax or other income evidence depending on state.","Certificates"],
+["♻️","Income Certificate — Renewal / Update","Assistance with updated income certificate requirements.","Usually Required: Existing certificate and current income information.","May Be Required: Current income evidence as required by the authority.","Certificates"],
+["🏠","Residence / Domicile Certificate","Assistance with residence/domicile certificate application.","Usually Required: Identity proof and residence/address proof.","May Be Required: Local residence history or additional state-specific proof.","Certificates"],
+["📄","EWS Certificate","Assistance with EWS certificate application and document preparation.","Usually Required: Identity, residence and income/asset-related documents as applicable.","May Be Required: Family income/asset evidence and other state-specific documents.","Certificates"],
+["📄","OBC / NCL Certificate","Assistance with OBC/NCL certificate application where applicable.","Usually Required: Identity, address and caste/community-related proof.","May Be Required: Income/NCL supporting documents as applicable.","Certificates"],
+["👶","Birth Certificate","Assistance with birth certificate application/correction guidance.","Usually Required: Birth details and identity/record documents as applicable.","May Be Required: Hospital/municipal records or supporting declaration.","Certificates"],
+["🕊️","Death Certificate","Assistance with death certificate application/correction guidance.","Usually Required: Death details and available official/hospital records.","May Be Required: Additional local authority documents.","Certificates"],
+["🎓","Scholarship Application","Scholarship application, document checklist and online submission assistance.","Usually Required: Student ID, marksheets, bank details and category/income documents where applicable.","May Be Required: Institution verification or scheme-specific certificates.","Education"],
+["🏫","College Admission Assistance","Application form, document upload and admission-process assistance.","Usually Required: Marksheets, ID, photos and required admission documents.","May Be Required: Category, domicile, income or other course-specific documents.","Education"],
+["📝","Exam Application","Online exam form filling and document upload assistance.","Usually Required: Candidate ID/details, photo, signature and educational information.","May Be Required: Category/disability certificates or exam-specific documents.","Exams"],
+["🎯","Admission & Counselling","Application/counselling registration and document preparation assistance.","Usually Required: Rank/score details, educational records and ID.","May Be Required: Category/domicile/income documents depending on counselling.","Education"],
+["🚌","Student / Bus Pass","Application or renewal assistance for student/bus pass services.","Usually Required: Student ID, institution proof, photo and address details.","May Be Required: Previous pass or route-specific information.","Education"],
+["💼","Government Job Application","Assistance with online recruitment applications and document uploads.","Usually Required: Educational certificates, ID, photo/signature and category documents if applicable.","May Be Required: Experience, domicile or exam-specific certificates.","Jobs"],
+["📄","Resume / CV Preparation","Professional resume creation and formatting.","Usually Required: Education, skills, experience and contact details.","May Be Required: Job description or preferred format.","Jobs"],
+["🧾","GST Registration","Assistance with GST registration application and document preparation.","Usually Required: PAN, mobile/email, business/address and bank/promoter details as applicable.","May Be Required: Additional business proof or authorisation documents.","Business"],
+["🏭","Udyam Registration","Assistance with Udyam registration application/document guidance.","Usually Required: Aadhaar/PAN and enterprise information as applicable.","May Be Required: Details requested by the official registration process.","Business"],
+["🏦","Bank Account Application","Assistance with account-opening application and KYC document preparation.","Usually Required: KYC/identity/address documents and PAN as applicable.","May Be Required: Additional bank-specific documents.","Banking"],
+["💳","Credit Card Application","Assistance with application form and document upload/KYC process.","Usually Required: PAN/KYC and income/employment information as requested by provider.","May Be Required: Income proof or bank statements.","Banking"],
+["💰","Personal Loan Application Assistance","Application and document-upload assistance; no approval guarantee.","Usually Required: KYC, PAN and income/employment information.","May Be Required: Bank statements, salary slips or ITR depending on provider.","Banking"],
+["🎓","Education Loan — India","Assistance with domestic education loan applications and document preparation.","Usually Required: Admission/offer letter, academic records, KYC and co-applicant information.","May Be Required: Collateral/income/security documents depending on lender.","Banking"],
+["✈️","Education Loan — Overseas","Assistance with overseas education loan application/document preparation.","Usually Required: University offer, academic records, passport/KYC and co-applicant information.","May Be Required: Collateral, income and visa-related documents.","Banking"],
+["📈","Demat / Investment Account Assistance","Technical/application assistance for demat or investment account opening.","Usually Required: PAN, KYC, bank details and contact information.","May Be Required: Additional verification requested by provider.","Banking"],
+["🛡️","Health Insurance","Application/KYC assistance for health insurance options.","Usually Required: KYC and applicant/family details.","May Be Required: Medical information or documents requested by insurer.","Insurance"],
+["❤️","Life / Term Insurance","Application/document assistance for life or term insurance.","Usually Required: KYC, personal and nominee details.","May Be Required: Income proof, medical tests or additional documents depending on insurer.","Insurance"],
+["👴","Senior Citizen Insurance","Assistance with senior citizen insurance applications/document preparation.","Usually Required: KYC, age and applicant details.","May Be Required: Medical records/tests depending on insurer.","Insurance"],
+["🚗","Motor / Car Insurance","Insurance application/renewal document assistance.","Usually Required: Vehicle RC, previous policy and KYC details as applicable.","May Be Required: Inspection/photos or other insurer requirements.","Insurance"],
+["🏍️","Two-Wheeler Insurance","Two-wheeler insurance application/renewal assistance.","Usually Required: RC/vehicle details and previous policy where applicable.","May Be Required: Vehicle photos or inspection.","Insurance"],
+["✈️","Travel Insurance","Travel insurance application assistance.","Usually Required: Passport/travel details and traveller information.","May Be Required: Visa/trip details or medical information.","Insurance"],
+["🏠","Home / Property Insurance","Assistance with home/property insurance application documents.","Usually Required: Property and proposer details plus KYC.","May Be Required: Ownership/property documents and valuation details.","Insurance"],
+["🌾","Crop / Agriculture Insurance","Application information and document assistance for crop/agriculture insurance.","Usually Required: Farmer/land/crop details as applicable.","May Be Required: Land records, bank details or scheme-specific documents.","Insurance"],
+["🚆","Train Ticket Assistance","Assistance with online train ticket booking process.","Usually Required: Passenger name, age, gender and journey details.","May Be Required: ID details depending on booking requirements.","Travel"],
+["🚌","Bus Ticket Assistance","Online bus ticket booking assistance.","Usually Required: Passenger and journey details.","May Be Required: ID/contact details depending on operator.","Travel"],
+["✈️","Flight Ticket Assistance","Flight search and booking assistance.","Usually Required: Passenger name exactly as required, route and travel date.","May Be Required: Passport/ID for applicable journeys.","Travel"],
+["🏨","Hotel Booking Assistance","Hotel search and booking assistance.","Usually Required: Guest name, destination and stay dates.","May Be Required: ID at check-in according to property rules.","Travel"],
+["🛕","Temple Darshan / Seva / Pooja","Assistance with online temple booking where official online booking is available.","Usually Required: Devotee details and booking information.","May Be Required: ID/details specific to the temple.","Travel"],
+["🙏","Pilgrimage Booking Assistance","Assistance with pilgrimage/travel-related online bookings.","Usually Required: Traveller/devotee details and journey information.","May Be Required: ID, permit or temple-specific documents.","Travel"],
+["📑","PDF to Word","Convert a suitable PDF into an editable Word document.","Usually Required: PDF file.","May Be Required: OCR/formatting may be needed for scanned PDFs.","Documents"],
+["📄","Word to PDF","Convert Word documents to PDF.","Usually Required: Word file.","May Be Required: Formatting corrections if the source document is complex.","Documents"],
+["📎","Merge PDF","Combine multiple PDFs into one PDF.","Usually Required: PDF files.","May Be Required: Desired file order.","Documents"],
+["🗜️","Compress PDF","Reduce PDF file size while keeping usable quality.","Usually Required: PDF file.","May Be Required: Target size requirement.","Documents"],
+["🖨️","Print / Scan Assistance","Printing, scanning and document preparation at cyber café.","Usually Required: Digital file or original document for scanning.","May Be Required: Number of copies / colour preference.","Cyber Café"],
+["⌨️","Typing Assistance","English/Kannada/Hindi and other typing assistance as available.","Usually Required: Text/content or source document.","May Be Required: Preferred language and format.","Cyber Café"],
+["🌐","Translation Assistance","Document/text translation assistance for supported languages.","Usually Required: Source text/document and target language.","May Be Required: Formatting or specialist review.","Cyber Café"],
+["🎨","Poster / Invitation Design","Basic digital poster, invitation and social-media design.","Usually Required: Text, names, dates and event details.","May Be Required: Photos/logo and preferred style.","Design"],
+["📊","Excel Data Entry","Data entry, cleanup and basic spreadsheet formatting.","Usually Required: Source data/file.","May Be Required: Desired columns, formulas or formatting.","Data"],
+["🏢","Business Document Preparation","Basic business forms, letters, applications and document formatting.","Usually Required: Business details and required content.","May Be Required: Existing template or authority format.","Business"]
+];
+
+function renderServices(list=services){
+ const grid=document.getElementById("serviceGrid");
+ grid.innerHTML="";
+ list.forEach((s,i)=>{
+   const [icon,name,desc]=s;
+   grid.innerHTML+=`<article class="service" tabindex="0" onclick="openService(${services.indexOf(s)})" onkeydown="if(event.key==='Enter')openService(${services.indexOf(s)})">
+   <div class="icon">${icon}</div><h3>${name}</h3><p>${desc}</p><span class="category-chip">${s[5]}</span><div class="doc-link"><span>📄 Required documents</span><span>View details →</span></div></article>`;
+ });
+}
+function openService(i){
+ const s=services[i];
+ const common = getDocumentChecklist(s[1], s[5]);
+ document.getElementById("modalContent").innerHTML=`
+ <div class="modal-top"><div class="modal-icon">${s[0]}</div><div><h2>${s[1]}</h2><div class="modal-sub">${s[5]} • QuickServe Online assistance</div></div></div>
+ <p>${s[2]}</p>
+ <div class="doc-section-title"><span>📋</span><h3 style="margin:0">Required Documents</h3></div>
+ <div class="doc-grid">
+   <div class="doc good"><strong>✅ Usually Required</strong><div>${formatDocs(s[3])}</div></div>
+   <div class="doc maybe"><strong>⚠️ May Be Required</strong><div>${formatDocs(s[4])}</div></div>
+ </div>
+ <div class="doc-section-title"><span>🪪</span><h3 style="margin:0">Common Supporting Documents</h3></div>
+ <div class="doc info"><strong>Keep these ready if applicable:</strong><ul>${common.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+ <div class="doc-section-title"><span>🧭</span><h3 style="margin:0">What We Do</h3></div>
+ <div class="doc">1. Tell us your requirement → 2. We check the applicable documents → 3. We explain charges and next steps → 4. With your approval, we assist with the application/service.</div>
+ <p class="action-note">Requirements can vary by state, service type and authority. Some services may require an in-person visit or an authorised centre. Official approval/issuance is not guaranteed. Government/provider charges, if any, are separate from QuickServe charges.</p>
+ <div class="actions"><a class="btn btn-primary" target="_blank" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello QuickServe Online, I need help with: "+s[1])}">Start on WhatsApp</a><a class="btn btn-light" href="tel:+919901043113">Call 9901043113</a><a class="btn btn-light" target="_blank" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP">Join Group</a><a class="btn btn-light" target="_blank" href="https://www.instagram.com/channel/AbbVAii3aASLStei/">IG Channel</a></div>`;
+ document.getElementById("modal").classList.add("show");
+}
+function formatDocs(text){
+ return text.replace(/^Usually Required:\s*/,'').replace(/^May Be Required:\s*/,'').split(/;\s*/).map(x=>`<div style="margin-top:5px">• ${x}</div>`).join('');
+}
+function getDocumentChecklist(name,category){
+ const id=['Aadhaar card / Aadhaar details','PAN card','Voter ID / Election Photo ID (if available)','Passport-size photo','Mobile number and email ID'];
+ const address=['Aadhaar card or other address proof','Voter ID / ration card / utility bill or other accepted address proof','Recent passport-size photo'];
+ const education=['Aadhaar card or other ID proof','Student ID / college or school certificate','10th/12th/degree marksheets as applicable','Bank passbook/account details'];
+ const job=['Aadhaar card or other ID proof','PAN card','Educational certificates / marksheets','Passport-size photo and signature'];
+ const bank=['Aadhaar card / KYC ID','PAN card','Bank account details / cancelled cheque where applicable','Mobile number and email ID'];
+ const business=['PAN card','Aadhaar card of proprietor/authorised person','Business/address proof','Bank account details where applicable'];
+ const insurance=['Aadhaar card / KYC ID','PAN card where applicable','Bank details for applicable transactions','Nominee/family/vehicle/property details depending on policy'];
+ const travel=['Aadhaar card / valid ID for domestic travel','Passport for international travel','Passenger/guest details','Mobile number and email ID'];
+ if(name.includes('PAN')) return ['Existing PAN card (for correction/update)','Aadhaar card or other accepted identity/address/DOB proof','Passport-size photo and signature where applicable','Mobile number and email ID'];
+ if(name.includes('Voter')) return ['Aadhaar card or other accepted identity/age proof','Address/residence proof','Existing Voter ID/EPIC details for correction','Recent photo where required'];
+ if(name.includes('Passport')) return ['Aadhaar card or other accepted ID/address proof','Existing passport for renewal/reissue','Date-of-birth proof as applicable','Passport-size photographs/documents as required'];
+ if(name.includes('Aadhaar')) return ['Existing Aadhaar card / Aadhaar number','Original supporting identity/address documents for the requested update','Mobile number linked to Aadhaar where applicable'];
+ if(category==='Certificates') return ['Aadhaar card / other identity proof','Address/residence proof','Existing certificate if this is an update/renewal','Income/caste/family/land/school records where applicable'];
+ if(category==='Education') return education;
+ if(category==='Exams') return [...education,'Application/login details where applicable'];
+ if(category==='Jobs') return job;
+ if(category==='Banking') return bank;
+ if(category==='Business') return business;
+ if(category==='Insurance') return insurance;
+ if(category==='Travel') return travel;
+ if(category==='Documents' || category==='Cyber Café' || category==='Design' || category==='Data') return ['Original/digital source document or file','Aadhaar/PAN/ID only when required for the specific service','Required output format or size'];
+ return id;
+}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function searchServices(){
+ const q=document.getElementById("searchInput").value.toLowerCase().trim();
+ if(!q){renderServices();return}
+ const found=services.filter(s=>s.join(" ").toLowerCase().includes(q));
+ renderServices(found);
+ document.getElementById("services").scrollIntoView();
+}
+document.getElementById("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")searchServices()});
+
+function submitRequest(e){
+ e.preventDefault();
+ const msg=`Hello QuickServe Online,%0A%0AService Request%0AName: ${encodeURIComponent(document.getElementById("name").value)}%0AMobile: ${encodeURIComponent(document.getElementById("mobile").value)}%0AState: ${encodeURIComponent(document.getElementById("state").value)}%0AService: ${encodeURIComponent(document.getElementById("service").value)}%0ADetails: ${encodeURIComponent(document.getElementById("details").value)}`;
+ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank");
+}
+let fontScale=1;
+function changeFont(n){fontScale=Math.min(1.25,Math.max(.9,fontScale+n*.05));document.body.style.fontSize=(16*fontScale)+"px"}
+function resetFont(){fontScale=1;document.body.style.fontSize="16px"}
+function toggleContrast(){document.body.classList.toggle("high-contrast")}
+function toggleEasy(){document.body.classList.toggle("easy")}
+
+function toggleMobileMenu(){
+  const menu=document.getElementById("mobileMenu");
+  const btn=document.querySelector(".menu");
+  if(!menu || !btn) return;
+  const open=menu.classList.toggle("open");
+  menu.setAttribute("aria-hidden",String(!open));
+  btn.setAttribute("aria-expanded",String(open));
+  btn.textContent=open?"✕":"☰";
+}
+function closeMobileMenu(){
+  const menu=document.getElementById("mobileMenu");
+  const btn=document.querySelector(".menu");
+  if(!menu || !btn) return;
+  menu.classList.remove("open");
+  menu.setAttribute("aria-hidden","true");
+  btn.setAttribute("aria-expanded","false");
+  btn.textContent="☰";
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMobileMenu()});
+window.addEventListener("resize",()=>{if(window.innerWidth>700)closeMobileMenu()});
+
+renderServices();
+</script>
+</body>
+</html>
