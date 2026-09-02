@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pavan05062007.github.io/quickserve-online/</loc>
-  </url>
-</urlset>
+User-agent: *
+Allow: /
+
+Sitemap: https://pavan05062007.github.io/quickserve-online/sitemap.xml
