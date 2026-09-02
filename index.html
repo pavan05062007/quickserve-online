@@ -1,9 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="QuickServe Online - Digital assistance for online services across India.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://pavan05062007.github.io/quickserve-online/">
+
+<!-- Search & social sharing metadata -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="QuickServe Online | Online Digital Service Assistance Across India">
+<meta property="og:description" content="One Place. Multiple Services. Done Online. Get assistance with ID proofs, certificates, education, jobs, banking, insurance, travel, documents and cyber café services.">
+<meta property="og:url" content="https://pavan05062007.github.io/quickserve-online/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="QuickServe Online | One Place. Multiple Services. Done Online.">
+<meta name="twitter:description" content="Digital assistance for online services across India, with document checklists and application support.">
+
+<!-- Structured data helps Google understand the site and organization. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pavan05062007.github.io/quickserve-online/#organization",
+      "name": "QuickServe Online",
+      "url": "https://pavan05062007.github.io/quickserve-online/",
+      "description": "Independent digital assistance service for online applications, document preparation and related services across India.",
+      "sameAs": [
+        "https://www.instagram.com/heyy.__pavan/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9901043113",
+        "contactType": "customer service",
+        "email": "pavankumarrogannavar@gmail.com",
+        "availableLanguage": ["English", "Kannada", "Hindi"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pavan05062007.github.io/quickserve-online/#website",
+      "url": "https://pavan05062007.github.io/quickserve-online/",
+      "name": "QuickServe Online",
+      "description": "One Place. Multiple Services. Done Online.",
+      "publisher": {
+        "@id": "https://pavan05062007.github.io/quickserve-online/#organization"
+      },
+      "inLanguage": "en-IN"
+    }
+  ]
+}
+</script>
 <title>QuickServe Online | One Place. Multiple Services. Done Online.</title>
 <style>
 :root{--primary:#155eef;--dark:#10233f;--bg:#f6f8fc;--card:#fff;--text:#172033;--muted:#64748b;--border:#e2e8f0;--success:#0f9d58}
@@ -138,7 +187,7 @@ header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
 <h1>Need an Online Service?<br>We Help You Get It Done.</h1>
 <p>One Place. Multiple Services. Done Online.</p>
 <div class="search">
-<input id="searchInput" placeholder="What service do you need? e.g. PAN, Caste Certificate, Scholarship">
+<input id="searchInput" type="search" aria-label="Search QuickServe Online services" placeholder="What service do you need? e.g. PAN, Caste Certificate, Scholarship">
 <button onclick="searchServices()">Search</button>
 </div>
 <p style="font-size:13px;margin-top:12px">Examples: PAN Correction • Caste Certificate • Scholarship • Passport • GST Registration • Education Loan • Insurance • Train Ticket</p>
@@ -181,6 +230,9 @@ header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
   </div>
 </div>
 <div class="notice"><strong>Important:</strong> QuickServe Online is an independent digital assistance service. We are not a government office, bank, insurer, railway, university or other official authority. Approval/issuance is subject to the concerned authority/provider.</div>
+<div class="notice" aria-label="QuickServe Online service categories">
+<strong>Services include:</strong> Aadhaar and PAN assistance, Voter ID and Passport support, Caste, Income, Residence, EWS and OBC/NCL certificates, scholarships, college admission, exam applications, student/bus passes, government job applications, GST and Udyam registration, banking and loan application assistance, demat assistance, insurance, train/bus/flight and hotel booking assistance, temple and pilgrimage booking assistance, PDF/Word services, printing, scanning, typing, translation, design and Excel data entry.
+</div>
 <div id="serviceGrid" class="grid"></div>
 </div>
 </section>
@@ -224,15 +276,24 @@ header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
 </div>
 <form class="form" onsubmit="submitRequest(event)">
 <h3>Service Request</h3>
-<label>Full Name</label><input required id="name" placeholder="Your name">
-<label>Mobile Number</label><input required id="mobile" type="tel" placeholder="10-digit mobile number">
+<label>Full Name</label><input required id="name" autocomplete="name" placeholder="Your name">
+<label>Mobile Number</label><input required id="mobile" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9]{10}" placeholder="10-digit mobile number">
 <label>State</label><select id="state"><option> Karnataka</option><option>Andhra Pradesh</option><option>Telangana</option><option>Tamil Nadu</option><option>Kerala</option><option>Maharashtra</option><option>Other State / UT</option></select>
-<label>Service Required</label><input required id="service" placeholder="e.g. Income Certificate">
+<label>Service Required</label><input required id="service" autocomplete="off" placeholder="e.g. Income Certificate">
 <label>Requirement Details</label><textarea id="details" placeholder="Tell us what you need"></textarea>
 <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
 </form>
 </div>
 </section>
+<noscript>
+<div class="container" style="padding:20px 18px">
+  <div class="notice">
+    <strong>QuickServe Online services:</strong> ID proof assistance, certificates, education and scholarships, exam applications, jobs, GST/Udyam registration, banking and loan application assistance, insurance, travel, temple/pilgrimage booking assistance, PDF/document services, typing, translation, design, Excel data entry and cyber café services.
+    JavaScript is required for the interactive service search and document-checklist popups.
+  </div>
+</div>
+</noscript>
+
 </main>
 
 <footer>
