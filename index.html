@@ -87,21 +87,21 @@ footer{background:#09182d;color:#cbd5e1;padding:30px 0}.footer-grid{display:flex
 
 
 /* QuickServe visual upgrade */
-:root{--primary:#0f766e;--primary2:#f59e0b;--dark:#172554;--bg:#f4f7ff;--card:#fff;--text:#172033;--muted:#64748b;--border:#e2e8f0;--success:#16a34a;--gold:#f59e0b}
+:root{--primary:#2563eb;--primary2:#7c3aed;--dark:#0f172a;--bg:#f4f7ff;--card:#fff;--text:#172033;--muted:#64748b;--border:#e2e8f0;--success:#16a34a;--gold:#f59e0b}
 body{background:radial-gradient(circle at 10% 0%,#eef4ff 0,transparent 30%),radial-gradient(circle at 90% 10%,#f3e8ff 0,transparent 26%),var(--bg)}
 header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
-.logo{display:inline-flex;align-items:center;gap:9px;font-size:23px;letter-spacing:-.5px;color:#0f172a}.logo-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(135deg,#2563eb 0%,#4f46e5 52%,#7c3aed 100%);box-shadow:0 8px 20px rgba(37,99,235,.25);position:relative;overflow:hidden}.logo-mark:before{content:'QS';position:relative;z-index:2;color:#fff;font-size:13px;letter-spacing:-1px;font-weight:1000;line-height:1}.logo-mark:after{content:'✦';position:absolute;right:5px;top:4px;color:#fff;font-size:8px;text-shadow:0 1px 4px rgba(0,0,0,.2)}.logo-text{font-weight:900}.logo-text span{color:#ec4899}.logo:hover .logo-mark{transform:rotate(-4deg) scale(1.04);box-shadow:0 10px 24px rgba(124,58,237,.3)}
+.logo{font-size:24px;letter-spacing:-.4px}.logo:before{content:'⚡';display:inline-grid;place-items:center;width:32px;height:32px;margin-right:7px;border-radius:9px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-size:17px;vertical-align:-3px}
 .btn{transition:.2s transform,.2s box-shadow}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(37,99,235,.2)}
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#071a3a 0%,#123f92 48%,#6d28d9 100%);padding:82px 0}
 .hero:before,.hero:after{content:'';position:absolute;border-radius:50%;filter:blur(2px);opacity:.18}.hero:before{width:360px;height:360px;background:#60a5fa;right:-120px;top:-150px}.hero:after{width:300px;height:300px;background:#c084fc;left:-140px;bottom:-160px}
 .hero-grid{position:relative;z-index:1}.badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18)}
 .hero h1{text-shadow:0 8px 30px rgba(0,0,0,.2)}.hero-card{border:1px solid rgba(255,255,255,.55);box-shadow:0 25px 70px rgba(0,0,0,.28)}
-.hero-card .mini-pill{display:inline-flex;align-items:center;gap:6px;background:#eef4ff;color:#0f766e;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;margin:3px}
+.hero-card .mini-pill{display:inline-flex;align-items:center;gap:6px;background:#eef4ff;color:#1d4ed8;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;margin:3px}
 .search{box-shadow:0 15px 35px rgba(0,0,0,.18)}
 .section-head h2{letter-spacing:-.7px}.notice{box-shadow:0 10px 28px rgba(15,23,42,.06)}
 .service{position:relative;overflow:hidden;box-shadow:0 5px 18px rgba(15,23,42,.04);background:linear-gradient(180deg,#fff,#fbfdff)}
 .service:after{content:'';position:absolute;right:-25px;top:-25px;width:75px;height:75px;border-radius:50%;background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(124,58,237,.10));pointer-events:none}
-.service .doc-link{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed #dbe3f0;color:#0f766e;font-size:12px;font-weight:900}
+.service .doc-link{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed #dbe3f0;color:#2563eb;font-size:12px;font-weight:900}
 .service .category-chip{display:inline-flex;margin-top:10px;background:#f1f5f9;color:#475569;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:800}
 .steps .step{box-shadow:0 8px 24px rgba(15,23,42,.05)}
 .step .num{box-shadow:0 7px 16px rgba(37,99,235,.18)}
@@ -126,64 +126,55 @@ header{box-shadow:0 4px 22px rgba(15,23,42,.06);backdrop-filter:blur(10px)}
 
 
 /* Priority service highlights */
-.priority-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 28px}.priority-card{padding:20px;border-radius:18px;border:2px solid;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(15,23,42,.07)}.priority-card:after{content:'HIGH PRIORITY';position:absolute;right:-34px;top:14px;transform:rotate(16deg);padding:5px 38px;font-size:9px;font-weight:900;letter-spacing:1px;color:#fff}.priority-card h3{margin:0 0 6px;font-size:21px}.priority-card p{margin:0 0 12px;font-size:12px;line-height:1.5;color:#475569}.priority-pills{display:flex;gap:6px;flex-wrap:wrap}.priority-pills span{background:#fff;border:1px solid rgba(100,116,139,.22);border-radius:999px;padding:6px 8px;font-size:10px;font-weight:800}.pan-card{background:linear-gradient(135deg,#eff6ff,#f8fafc);border-color:#0f766e}.pan-card h3{color:#0f766e}.pan-card:after{background:#1d4ed8}.scholar-card{background:linear-gradient(135deg,#f5f3ff,#fdf4ff);border-color:#8b5cf6}.scholar-card h3{color:#6d28d9}.scholar-card:after{background:#6d28d9}.insurance-card{background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border-color:#10b981}.insurance-card h3{color:#047857}.insurance-card:after{background:#047857}.udyam-card{background:linear-gradient(135deg,#fff7ed,#fffbeb);border-color:#f97316}.udyam-card h3{color:#c2410c}.udyam-card:after{background:#ea580c}.udyam-card .mini-link{color:#c2410c}.priority-card .mini-link{display:inline-block;margin-top:13px;font-size:12px;font-weight:900;text-decoration:none}.pan-card .mini-link{color:#0f766e}.scholar-card .mini-link{color:#6d28d9}.insurance-card .mini-link{color:#047857}@media(max-width:1050px){.priority-highlights{grid-template-columns:repeat(2,1fr)}}@media(max-width:800px){.priority-highlights{grid-template-columns:1fr}}
+.priority-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 28px}.priority-card{padding:20px;border-radius:18px;border:2px solid;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(15,23,42,.07)}.priority-card:after{content:'HIGH PRIORITY';position:absolute;right:-34px;top:14px;transform:rotate(16deg);padding:5px 38px;font-size:9px;font-weight:900;letter-spacing:1px;color:#fff}.priority-card h3{margin:0 0 6px;font-size:21px}.priority-card p{margin:0 0 12px;font-size:12px;line-height:1.5;color:#475569}.priority-pills{display:flex;gap:6px;flex-wrap:wrap}.priority-pills span{background:#fff;border:1px solid rgba(100,116,139,.22);border-radius:999px;padding:6px 8px;font-size:10px;font-weight:800}.pan-card{background:linear-gradient(135deg,#eff6ff,#f8fafc);border-color:#3b82f6}.pan-card h3{color:#1d4ed8}.pan-card:after{background:#1d4ed8}.scholar-card{background:linear-gradient(135deg,#f5f3ff,#fdf4ff);border-color:#8b5cf6}.scholar-card h3{color:#6d28d9}.scholar-card:after{background:#6d28d9}.insurance-card{background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border-color:#10b981}.insurance-card h3{color:#047857}.insurance-card:after{background:#047857}.priority-card .mini-link{display:inline-block;margin-top:13px;font-size:12px;font-weight:900;text-decoration:none}.pan-card .mini-link{color:#1d4ed8}.scholar-card .mini-link{color:#6d28d9}.insurance-card .mini-link{color:#047857}@media(max-width:800px){.priority-highlights{grid-template-columns:1fr}}
 
 /* Contact highlights */
-.contact-highlights{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin:0 0 28px}.contact-highlight{padding:20px;border-radius:20px;border:2px solid;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease}.contact-highlight:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(15,23,42,.13)}.contact-highlight h3{margin:0 0 7px;font-size:21px}.contact-highlight p{margin:0 0 13px;color:#475569;font-size:12px;line-height:1.5}.phone-highlight{background:linear-gradient(135deg,#eff6ff,#f8fafc);border-color:#0f766e}.phone-highlight h3{color:#0f766e}.social-highlight{background:linear-gradient(135deg,#fdf2f8,#f5f3ff);border-color:#a855f7}.social-highlight h3{color:#7e22ce}.group-highlight{background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border-color:#22c55e}.group-highlight h3{color:#15803d}.contact-number{display:block;font-size:17px;font-weight:900;text-decoration:none;margin:7px 0}.contact-actions{display:flex;gap:7px;flex-wrap:wrap}.contact-actions a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border-radius:10px;text-decoration:none;font-size:11px;font-weight:900;background:#fff;border:1px solid rgba(100,116,139,.2)}@media(max-width:850px){.contact-highlights{grid-template-columns:1fr}}
+.contact-highlights{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin:0 0 28px}.contact-highlight{padding:20px;border-radius:20px;border:2px solid;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease}.contact-highlight:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(15,23,42,.13)}.contact-highlight h3{margin:0 0 7px;font-size:21px}.contact-highlight p{margin:0 0 13px;color:#475569;font-size:12px;line-height:1.5}.phone-highlight{background:linear-gradient(135deg,#eff6ff,#f8fafc);border-color:#2563eb}.phone-highlight h3{color:#1d4ed8}.social-highlight{background:linear-gradient(135deg,#fdf2f8,#f5f3ff);border-color:#a855f7}.social-highlight h3{color:#7e22ce}.group-highlight{background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border-color:#22c55e}.group-highlight h3{color:#15803d}.contact-number{display:block;font-size:17px;font-weight:900;text-decoration:none;margin:7px 0}.contact-actions{display:flex;gap:7px;flex-wrap:wrap}.contact-actions a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border-radius:10px;text-decoration:none;font-size:11px;font-weight:900;background:#fff;border:1px solid rgba(100,116,139,.2)}@media(max-width:850px){.contact-highlights{grid-template-columns:1fr}}
 
 /* Karnataka Property, Kaveri & Old Land Records highlight */
 .land-highlight{margin:0 0 28px;padding:24px;border-radius:20px;background:linear-gradient(135deg,#fff7ed,#fffbeb 45%,#f0fdf4);border:2px solid #f59e0b;box-shadow:0 14px 35px rgba(245,158,11,.12);position:relative;overflow:hidden}.land-highlight:after{content:'OLD RECORDS';position:absolute;right:-35px;top:18px;transform:rotate(18deg);background:#b45309;color:#fff;padding:7px 45px;font-size:11px;font-weight:900;letter-spacing:1px}.land-highlight h2{margin:0 0 7px;font-size:28px;color:#92400e}.land-highlight p{margin:0 0 15px;color:#475569}.land-pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}.land-pill{background:#fff;border:1px solid #fed7aa;color:#92400e;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}.land-highlight .btn{background:#b45309;color:#fff}.land-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.land-mini{background:#fff;border:1px solid #fde68a;border-radius:12px;padding:12px}.land-mini strong{display:block;color:#1f2937;font-size:13px}.land-mini span{display:block;color:#64748b;font-size:11px;margin-top:3px}@media(max-width:700px){.land-grid{grid-template-columns:1fr 1fr}.land-highlight h2{font-size:23px}}@media(max-width:430px){.land-grid{grid-template-columns:1fr}.land-highlight{padding:18px}}
 
-/* Aesthetic polish & web logo */
-.logo-mark{transition:transform .25s ease,box-shadow .25s ease}.logo-text{white-space:nowrap}
-header{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.hero{min-height:560px;display:flex;align-items:center}.hero-card{transition:transform .3s ease,box-shadow .3s ease}.hero-card:hover{transform:translateY(-5px);box-shadow:0 30px 80px rgba(0,0,0,.25)}
-.section-head h2{font-weight:900}.section-head h2:after{content:'';display:block;width:52px;height:4px;border-radius:99px;margin:10px auto 0;background:linear-gradient(90deg,#2563eb,#7c3aed)}
-.service,.step,.contact-highlight,.priority-card,.land-mini{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.service:hover,.step:hover{transform:translateY(-6px)}
-.btn-primary{background:linear-gradient(135deg,#2563eb,#4f46e5)}
-.search{border:1px solid rgba(255,255,255,.5)}
-@media(max-width:430px){.logo{font-size:20px}.logo-mark{width:34px;height:34px}.logo-mark:before{width:21px;height:21px}.logo-mark:after{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* Strong visual motion */
+@keyframes qsFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes qsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes qsPulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.0)}50%{box-shadow:0 0 0 10px rgba(37,99,235,.10)}}
+@keyframes qsShine{0%{background-position:-220% 0}100%{background-position:220% 0}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.hero .badge{animation:qsFloat 3.5s ease-in-out infinite}
+.highlight-card,.contact-card,.service{transition:transform .28s ease,box-shadow .28s ease}
+.highlight-card:hover,.contact-card:hover,.service:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 18px 40px rgba(20,35,70,.16)}
+.btn{transition:transform .22s ease,box-shadow .22s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(20,35,70,.16)}
+.section-title{position:relative}
+.section-title::after{content:"";display:block;width:64px;height:4px;margin:12px auto 0;border-radius:99px;background:linear-gradient(90deg,transparent,#2563eb,transparent);background-size:220% 100%;animation:qsShine 2.4s linear infinite}
+.contact-card:first-child{animation:qsPulse 2.8s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* QuickServe Signature Color & Logo Refresh */
-:root{--primary:#6d28d9;--primary2:#ec4899;--dark:#17102b;--bg:#faf7ff;--card:#ffffff;--text:#211a2f;--muted:#6b6480;--border:#e8def5;--success:#0f9f8f;--gold:#f59e0b;--teal:#0f9f8f;--coral:#f97360}
-body{background:radial-gradient(circle at 8% 0%,#f3e8ff 0,transparent 30%),radial-gradient(circle at 92% 8%,#ffe4e6 0,transparent 28%),radial-gradient(circle at 50% 100%,#ccfbf1 0,transparent 24%),var(--bg)}
-header{border-bottom-color:#eadff5;box-shadow:0 5px 24px rgba(91,33,182,.08)}
-.logo{font-size:24px;letter-spacing:-.6px;color:#5b21b6;display:flex;align-items:center;gap:9px}
-.logo:before{display:none}.logo-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#6d28d9 0%,#ec4899 55%,#f97360 100%);color:#fff;font-size:20px;font-weight:900;box-shadow:0 8px 20px rgba(109,40,217,.28);flex:none}.logo-mark:after{content:'✦';position:absolute;margin-left:27px;margin-top:-22px;color:#fff;font-size:9px;text-shadow:0 1px 3px #6d28d9}
-.logo > span:last-child{color:#17102b}.logo > span:last-child b{color:#6d28d9}
-.btn-primary{background:linear-gradient(135deg,#6d28d9,#ec4899);color:#fff}.btn-light{background:#f3e8ff;color:#5b21b6}.btn:hover{box-shadow:0 12px 24px rgba(109,40,217,.22)}
-.hero{background:linear-gradient(135deg,#1b1035 0%,#5b21b6 48%,#db2777 100%)}.hero:before{background:#c084fc}.hero:after{background:#fb7185}.search button{background:linear-gradient(135deg,#6d28d9,#ec4899)}
-.service:hover{border-color:#c4b5fd;box-shadow:0 16px 32px rgba(109,40,217,.12)}.service .doc-link{color:#6d28d9}.tag{background:#f3e8ff;color:#6d28d9}.step .num{background:#f3e8ff;color:#6d28d9;box-shadow:0 7px 16px rgba(109,40,217,.18)}.notice strong{color:#6d28d9}
-.contact{background:linear-gradient(135deg,#17102b,#3b176b)}.social-updates{background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(236,72,153,.10))}.btn-channel{background:#f3e8ff;color:#6d28d9}.btn-group{background:#ccfbf1;color:#087f72}.social-strip{background:linear-gradient(135deg,#f5f3ff,#fce7f3,#ecfeff);border-color:#e9d5ff}
-.phone-highlight{background:linear-gradient(135deg,#f3e8ff,#faf5ff);border-color:#8b5cf6}.phone-highlight h3{color:#6d28d9}.social-highlight{background:linear-gradient(135deg,#fce7f3,#fdf2f8);border-color:#ec4899}.social-highlight h3{color:#be185d}.group-highlight{background:linear-gradient(135deg,#ecfeff,#f0fdfa);border-color:#14b8a6}.group-highlight h3{color:#0f766e}
-.land-highlight{background:linear-gradient(135deg,#fff7ed,#fef3c7 45%,#ecfeff);border-color:#f59e0b}.land-highlight h2{color:#92400e}.land-highlight .btn{background:linear-gradient(135deg,#b45309,#f59e0b)}
-.pan-card{background:linear-gradient(135deg,#eef2ff,#faf5ff);border-color:#6366f1}.pan-card h3,.pan-card .mini-link{color:#4f46e5}.scholar-card{background:linear-gradient(135deg,#fdf2f8,#f5f3ff);border-color:#ec4899}.scholar-card h3,.scholar-card .mini-link{color:#be185d}.insurance-card{background:linear-gradient(135deg,#ecfeff,#f0fdfa);border-color:#14b8a6}.insurance-card h3,.insurance-card .mini-link{color:#0f766e}
-.modal-box{box-shadow:0 25px 80px rgba(91,33,182,.22)}footer{background:#120b22}.mobile-menu .mobile-wa{background:linear-gradient(135deg,#6d28d9,#ec4899)}
-@media(max-width:430px){.logo{font-size:20px;gap:7px}.logo-mark{width:34px;height:34px;font-size:18px}}
 
-/* Final signature branding */
-.logo-mark{background:linear-gradient(135deg,#7c3aed 0%,#ec4899 58%,#f97316 100%)!important;border-radius:13px;box-shadow:0 9px 24px rgba(124,58,237,.28)!important}
-.logo-text{color:#241334!important}.logo-text span{color:#db2777!important}
-.logo:hover .logo-mark{transform:rotate(-3deg) scale(1.06)!important}
-.hero{background:linear-gradient(135deg,#24103f 0%,#6d28d9 45%,#db2777 78%,#f97316 100%)!important}
-.hero:before{background:#a78bfa!important}.hero:after{background:#fb7185!important}
-.btn-primary,.search button{background:linear-gradient(135deg,#7c3aed,#ec4899)!important}
-.btn-light{background:#f5edff!important;color:#6d28d9!important}
-.section-head h2:after{background:linear-gradient(90deg,#7c3aed,#ec4899,#f97316)!important}
-.service:hover{border-color:#c4b5fd!important;box-shadow:0 16px 34px rgba(124,58,237,.14)!important}
-.tag,.service .doc-link{color:#6d28d9!important}.tag{background:#f3e8ff!important}
-.step .num{background:#f3e8ff!important;color:#6d28d9!important}
-.contact{background:linear-gradient(135deg,#17102b,#4c1d95,#831843)!important}
-footer{background:#11091d!important}
-.mobile-menu .mobile-wa{background:linear-gradient(135deg,#7c3aed,#ec4899)!important}
+.shop-location{margin:0 0 28px;padding:24px;border-radius:20px;background:linear-gradient(135deg,#eff6ff,#f8fafc 55%,#eefcf6);border:2px solid #60a5fa;box-shadow:0 14px 35px rgba(37,99,235,.10);position:relative;overflow:hidden}
+.shop-location:after{content:'VISIT OUR SHOP';position:absolute;right:-35px;top:18px;transform:rotate(18deg);background:#1d4ed8;color:#fff;padding:7px 45px;font-size:11px;font-weight:900;letter-spacing:1px}
+.shop-location h2{margin:0 0 7px;font-size:28px;color:#1e40af}
+.shop-location p{margin:0 0 15px;color:#475569}
+.shop-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.shop-photo{width:100%;height:100%;min-height:250px;object-fit:cover;border-radius:16px;border:1px solid #dbeafe;box-shadow:0 10px 24px rgba(15,23,42,.10);background:#e2e8f0}
+.shop-info{background:#fff;border:1px solid #dbeafe;border-radius:16px;padding:18px}
+.shop-info h3{margin:0 0 10px;color:#0f172a;font-size:19px}
+.shop-info .address{font-size:14px;line-height:1.65;color:#334155;margin-bottom:14px}
+.shop-meta{display:grid;gap:9px;margin:0 0 16px}
+.shop-meta div{padding:10px 12px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0;font-size:13px}
+.shop-actions{display:flex;gap:9px;flex-wrap:wrap}
+.shop-actions .btn{background:#1d4ed8;color:#fff}
+.shop-actions .btn-light{background:#fff;color:#1d4ed8;border:1px solid #bfdbfe}
+@media(max-width:800px){.shop-layout{grid-template-columns:1fr}.shop-photo{min-height:220px}.shop-location h2{font-size:23px}}
+
 </style>
 </head>
 <body>
 
 <header>
 <div class="container nav">
-<a class="logo" href="#home" aria-label="QuickServe Online Home"><span class="logo-mark" aria-hidden="true"></span><span class="logo-text">QuickServe <span>Online</span></span></a>
+<a class="logo" href="#home">QuickServe <span>Online</span></a>
 <nav>
 <a href="#services">Services</a><a href="#how">How It Works</a><a href="#contact">Contact</a>
 <a class="btn btn-primary" href="https://wa.me/919901043113" target="_blank">WhatsApp</a><a class="btn btn-light" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Group</a><a class="btn btn-light" href="https://www.instagram.com/channel/AbbVAii3aASLStei/" target="_blank">IG Channel</a>
@@ -202,7 +193,7 @@ footer{background:#11091d!important}
 </div>
 
 <main>
-<section class="hero" id="home">
+<section class="hero reveal" id="home">
 <div class="container hero-grid">
 <div>
 <span class="badge">Serving Customers Across India</span>
@@ -237,7 +228,7 @@ footer{background:#11091d!important}
 </div>
 </section>
 
-<section id="services">
+<section id="services" class="reveal">
 <div class="container">
 <div class="section-head"><h2>300+ Online Assistance Services</h2><p>Browse by category or search for the exact service you need.</p></div>
 <div class="join-group"><div style="display:flex;gap:14px;align-items:center"><div class="group-icon">💬</div><div><h3>Join the QuickServe WhatsApp Group</h3><p>Get service updates, useful information, reminders and new service announcements.</p></div></div><a class="btn" href="https://chat.whatsapp.com/D8hfNaunY8w7xRfFbPNeMP" target="_blank">Join Group →</a></div>
@@ -270,6 +261,29 @@ footer{background:#11091d!important}
     </div>
   </div>
 </div>
+
+<div class="shop-location reveal" id="shop-location">
+  <h2>📍 Locate Our Shop</h2>
+  <p><strong>Visit us in Noolvi, Hubballi:</strong> You can call, WhatsApp or get directions to our physical centre.</p>
+  <div class="shop-layout">
+    <img class="shop-photo" src="data:image/jpeg;base64,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" alt="Shri Guru Raghavendra Online Center Noolvi shop photo">
+    <div class="shop-info">
+      <h3>🏪 Shri Guru Raghavendra Online Center Noolvi</h3>
+      <div class="address"><strong>Address:</strong><br>Pratham Plaza, B-4, Kundgol - Hubli Rd, Nulvi, Hubballi, Karnataka 580028</div>
+      <div class="shop-meta">
+        <div>📞 <strong>Phone:</strong> 9901043113</div>
+        <div>💬 <strong>WhatsApp:</strong> Available for service enquiries</div>
+        <div>🕘 <strong>Business hours:</strong> As shown on our Google Business Profile</div>
+      </div>
+      <div class="shop-actions">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Shri%20Guru%20Raghavendra%20Online%20Center%20Noolvi%2C%20Pratham%20Plaza%2C%20B-4%2C%20Kundgol%20-%20Hubli%20Rd%2C%20Nulvi%2C%20Hubballi%2C%20Karnataka%20580028" target="_blank" rel="noopener">📍 Get Directions</a>
+        <a class="btn btn-light" href="tel:+919901043113">📞 Call Us</a>
+        <a class="btn btn-light" href="https://wa.me/919901043113" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="land-highlight" id="land-records">
   <h2>🏠 Karnataka Land Records & Old Records — Special Assistance</h2>
   <p><strong>Our special focus:</strong> old land records, old registered documents and property/registration record assistance. We help customers identify the correct record, prepare details, submit online requests where available and understand the next official step.</p>
@@ -299,29 +313,23 @@ footer{background:#11091d!important}
   <div class="actions"><a class="btn" href="https://wa.me/919901043113?text=Hello%20QuickServe%20Online%2C%20I%20need%20help%20creating%20a%20professional%20website%20for%20my%20business." target="_blank">Create My Website →</a><a class="btn btn-light" href="#services">View Website Services</a></div>
 </div>
 <div class="priority-highlights" aria-label="High priority service sections">
-  <section class="priority-card pan-card" id="pan-highlight">
+  <section class="priority-card pan-card reveal" id="pan-highlight">
     <h3>🪪 PAN Card Services</h3>
     <p><strong>Special assistance:</strong> new PAN applications, corrections, updates, reprint, e-PAN and application-status support.</p>
     <div class="priority-pills"><span>New PAN</span><span>Correction</span><span>Reprint</span><span>e-PAN</span><span>Status</span></div>
     <a class="mini-link" href="#services">View PAN Services →</a>
   </section>
-  <section class="priority-card scholar-card" id="scholarship-highlight">
+  <section class="priority-card scholar-card reveal" id="scholarship-highlight">
     <h3>🎓 Scholarship Services</h3>
     <p><strong>Student assistance:</strong> scholarship applications, document preparation, uploads, renewal, correction and status checking.</p>
     <div class="priority-pills"><span>Applications</span><span>Renewal</span><span>Documents</span><span>Correction</span><span>Status</span></div>
     <a class="mini-link" href="#services">View Scholarship Services →</a>
   </section>
-  <section class="priority-card insurance-card" id="insurance-highlight">
+  <section class="priority-card insurance-card reveal" id="insurance-highlight">
     <h3>🛡️ Insurance Services</h3>
     <p><strong>Insurance assistance:</strong> health, life, term, motor, travel, home, shop, business, crop and policy-service support.</p>
     <div class="priority-pills"><span>Health</span><span>Life & Term</span><span>Motor</span><span>Travel</span><span>Business</span></div>
     <a class="mini-link" href="#services">View Insurance Services →</a>
-  </section>
-  <section class="priority-card udyam-card" id="udyam-highlight">
-    <h3>🏭 Udyam Aadhaar Registration</h3>
-    <p><strong>MSME registration assistance:</strong> help with Udyam Registration application, document preparation and submission guidance.</p>
-    <div class="priority-pills"><span>Udyam Registration</span><span>MSME</span><span>New Registration</span><span>Documents</span><span>Status</span></div>
-    <a class="mini-link" href="#services">View Udyam Service →</a>
   </section>
 </div>
 <div class="notice"><strong>Important:</strong> QuickServe Online is an independent digital assistance service. We are not a government office, bank, insurer, railway, university or other official authority. Approval/issuance is subject to the concerned authority/provider.</div>
@@ -330,7 +338,7 @@ footer{background:#11091d!important}
 </div>
 </section>
 
-<section id="how">
+<section id="how" class="reveal">
 <div class="container">
 <div class="section-head"><h2>How QuickServe Works</h2><p>Simple process from anywhere in India.</p></div>
 <div class="steps">
@@ -347,14 +355,14 @@ footer{background:#11091d!important}
 <div class="section-head"><h2>Secure & Responsible Service</h2><p>Your documents should be handled carefully.</p></div>
 <div class="grid">
 <div class="service"><div class="icon">🔐</div><h3>Minimum Data</h3><p>Only information necessary for the requested service should be collected.</p></div>
-<div class="service"><div class="icon">🚫</div><h3>No Passwords / OTPs</h3><p>Never share passwords, ATM PINs, UPI PINs or unnecessary OTPs.</p></div>
+<div class="service"><div class="icon">🚫</div><h3>Passwords / OTPs — Only When Required</h3><p>Some services may require an OTP. Never share passwords, ATM PINs or UPI PINs with us; enter OTPs yourself when required.</p></div>
 <div class="service"><div class="icon">🗑️</div><h3>Document Retention</h3><p>Use a clear retention/deletion policy for uploaded documents.</p></div>
 <div class="service"><div class="icon">🇮🇳</div><h3>India-Wide</h3><p>State and service requirements can differ, so we check applicable requirements.</p></div>
 </div>
 </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="contact reveal">
 <div class="container contact-grid">
 <div>
 <h2>Need Help With a Service?</h2>
@@ -774,6 +782,7 @@ const services=[
 ["📑","Property Due-Diligence Document Collection Assistance","Assistance in collecting and organizing available property records for review; not legal/title certification.","Usually Required: Property identification details and available ownership/registration records.","May Be Required: EC, registered deeds, RTC/Pahani, mutation, survey sketches and tax records.","Property Records"],
 ["🗄️","Old Property Record Restoration / Digital Archive","Scanning, cleanup, naming and digital archiving assistance for old property and land documents.","Usually Required: Original or scanned documents.","May Be Required: OCR, translation, indexing and folder structure requirements.","Old Records"],
 ["🌐","Professional Website Creation","Professional website creation assistance for shops, businesses, restaurants, clinics, coaching centres, professionals and local service providers.","Usually Required: Business/person name; Services or products list; Contact number; Email or WhatsApp details; Photos/logo if available.","May Be Required: Address/location; Google Maps link; Social media links; Domain name; Hosting preference; Additional pages or features requested.","Website & Digital Services"]
+ ["🏦","EPFO / PF Services Assistance","Independent digital assistance for EPFO / PF online services, including UAN-related help, passbook access, KYC/document updates, claim and transfer status guidance, nominee/profile assistance and grievance-status guidance.","Usually Required: UAN / PF account details; Aadhaar or other accepted identity proof; Mobile number; Bank account details or employment details when applicable","May Be Required: Employer details; Bank proof; Additional KYC documents; Claim/transfer supporting records depending on the request","Jobs, PF & Employment Services"],
 ];
 
 function renderServices(list=services){
@@ -874,25 +883,19 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMobileMenu()});
 window.addEventListener("resize",()=>{if(window.innerWidth>700)closeMobileMenu()});
 
 renderServices();
-</script>
 
-<!-- QuickServe AI Assistant -->
-<style>
-.ai-fab{position:fixed;right:18px;bottom:82px;z-index:90;width:62px;height:62px;border:0;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#ec4899,#f97316);color:#fff;font-size:27px;cursor:pointer;box-shadow:0 14px 35px rgba(124,58,237,.35);animation:aiPulse 2.4s infinite}.ai-fab span{position:absolute;right:-2px;top:-4px;background:#22c55e;border:3px solid #fff;width:15px;height:15px;border-radius:50%}.ai-box{position:fixed;right:18px;bottom:154px;width:min(380px,calc(100vw - 28px));height:520px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;z-index:91;box-shadow:0 25px 70px rgba(15,23,42,.25);display:none;overflow:hidden}.ai-box.open{display:flex;flex-direction:column;animation:aiIn .25s ease}.ai-head{padding:16px 17px;color:#fff;background:linear-gradient(135deg,#6d28d9,#db2777,#f97316);display:flex;align-items:center;justify-content:space-between}.ai-head strong{display:block;font-size:16px}.ai-head small{opacity:.9}.ai-close{background:rgba(255,255,255,.16);border:0;color:#fff;border-radius:9px;width:34px;height:34px;font-size:20px;cursor:pointer}.ai-messages{flex:1;padding:14px;overflow:auto;background:#f8fafc}.ai-msg{max-width:86%;padding:10px 12px;border-radius:14px;margin:7px 0;font-size:13px;line-height:1.45}.ai-bot{background:#fff;border:1px solid #e5e7eb;margin-right:auto}.ai-user{background:#7c3aed;color:#fff;margin-left:auto}.ai-quick{padding:9px 12px;display:flex;gap:6px;overflow:auto;border-top:1px solid #e5e7eb}.ai-quick button{white-space:nowrap;border:1px solid #ddd6fe;background:#faf5ff;color:#6d28d9;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer}.ai-form{display:flex;gap:7px;padding:10px;border-top:1px solid #e5e7eb}.ai-form input{flex:1;border:1px solid #dbe1ea;border-radius:11px;padding:11px;outline:0}.ai-form button{border:0;border-radius:11px;padding:0 15px;background:#7c3aed;color:#fff;font-weight:800;cursor:pointer}@keyframes aiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}@keyframes aiIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}@media(max-width:600px){.ai-fab{right:14px;bottom:76px}.ai-box{right:14px;bottom:145px;height:min(520px,calc(100vh - 180px))}}@media(prefers-reduced-motion:reduce){.ai-fab,.ai-box{animation:none}}
-</style>
-<button class="ai-fab" onclick="toggleAI()" aria-label="Open QuickServe AI Assistant">🤖<span></span></button>
-<div class="ai-box" id="aiBox" role="dialog" aria-label="QuickServe AI Assistant">
-  <div class="ai-head"><div><strong>🤖 QuickServe AI Assistant</strong><small>Ask about our services</small></div><button class="ai-close" onclick="toggleAI()" aria-label="Close">×</button></div>
-  <div class="ai-messages" id="aiMessages"><div class="ai-msg ai-bot">Hi! 👋 I’m the QuickServe Assistant. I can help you find a service, understand common documents, or connect you with our team.<br><br>Try asking: <b>“What documents are needed for PAN?”</b></div></div>
-  <div class="ai-quick"><button onclick="aiQuick('PAN Card')">🪪 PAN</button><button onclick="aiQuick('Scholarship')">🎓 Scholarship</button><button onclick="aiQuick('Insurance')">🛡️ Insurance</button><button onclick="aiQuick('Udyam Registration')">🏭 Udyam</button><button onclick="aiQuick('Land Records')">🏠 Land Records</button></div>
-  <form class="ai-form" onsubmit="sendAI(event)"><input id="aiInput" placeholder="Ask QuickServe..." autocomplete="off"><button>Send</button></form>
-</div>
-<script>
-function toggleAI(){const b=document.getElementById('aiBox');b.classList.toggle('open');if(b.classList.contains('open'))document.getElementById('aiInput').focus()}
-function addAI(text,who){const m=document.getElementById('aiMessages');const d=document.createElement('div');d.className='ai-msg '+(who==='user'?'ai-user':'ai-bot');d.innerHTML=text;m.appendChild(d);m.scrollTop=m.scrollHeight}
-function aiQuick(q){document.getElementById('aiInput').value=q;sendAI(new Event('submit',{cancelable:true}))}
-function sendAI(e){if(e&&e.preventDefault)e.preventDefault();const i=document.getElementById('aiInput'),q=i.value.trim();if(!q)return;addAI(q.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])),'user');i.value='';let x=q.toLowerCase(),r='I can help you find the right QuickServe service. You can also contact our team on WhatsApp for personalized assistance.';if(x.includes('pan'))r='🪪 <b>PAN Card:</b> We can assist with new PAN applications, corrections, updates, reprint/e-PAN and related document preparation. Tap the PAN service card for the required documents.';else if(x.includes('scholar'))r='🎓 <b>Scholarship:</b> We can help with scholarship applications, document preparation/upload, status checks and corrections. Eligibility and approval are decided by the concerned scheme/authority.';else if(x.includes('insurance'))r='🛡️ <b>Insurance:</b> We provide application, KYC and online assistance for major insurance categories. We do not guarantee approval or provide unauthorized financial advice.';else if(x.includes('udyam')||x.includes('msme'))r='🏭 <b>Udyam Registration:</b> We can assist with new Udyam/MSME registration and document/application support.';else if(x.includes('land')||x.includes('rtc')||x.includes('pahani')||x.includes('kaveri')||x.includes('ec'))r='🏠 <b>Land Records & Kaveri:</b> We can assist with old land records, RTC/Pahani, mutation, EC, registered-document searches and related applications. Record availability depends on the concerned department/system.';else if(x.includes('website'))r='🌐 <b>Website Creation:</b> We can create professional mobile-friendly websites for businesses, shops and service providers, including WhatsApp, Maps and social links.';setTimeout(()=>addAI(r,'bot'),250)}
+// Scroll reveal animation
+(function(){
+  const items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('visible'));return;}
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach((el,i)=>{el.style.transitionDelay=(Math.min(i,8)*70)+'ms';io.observe(el);});
+  document.querySelectorAll('.service,.highlight-card,.contact-card').forEach((el,i)=>{el.style.transitionDelay=(i%8*45)+'ms'});
+})();
 </script>
-
 </body>
 </html>
